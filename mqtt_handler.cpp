@@ -12,7 +12,7 @@ static bool mqtt_reconnect() {
     while (!s_mqtt.connected()) {
         Serial.printf("[MQTT] Connecting to %s ... ", TB_HOST);
 
-        if (s_mqtt.connect("espdev", "pd", "pdsolanki")) {
+        if (s_mqtt.connect("client_id", "user_id", "password")) {
             Serial.println("connected");
             return true;
         }
